@@ -1,0 +1,4 @@
+=form_for [@list, @task] do |f|
+  =f.label :text, "Item:", :for => "item"
+  =f.text_field :text, :id => "item"
+  =f.submit  

@@ -1,0 +1,7 @@
+%h1
+  Tasks
+%ul
+  -@tasks.each do |task|
+    %li 
+      =link_to task.text, list_task_path(params[:list_id], task.id)
+= link_to "New", new_list_task_path(params[:list_id])

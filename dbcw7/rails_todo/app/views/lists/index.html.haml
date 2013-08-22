@@ -1,0 +1,7 @@
+%h1
+  Lists
+%ul
+  -@lists.each do |list|
+    %li
+      =link_to list.title, list_tasks_path(list.id)
+=link_to "New", new_list_path

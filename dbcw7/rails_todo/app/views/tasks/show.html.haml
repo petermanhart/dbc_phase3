@@ -1,0 +1,4 @@
+%p
+  =@task.text
+=link_to 'delete', list_task_path(params[:list_id], @task), :method => :delete
+=link_to 'edit', edit_list_task_path(params[:list_id], @task.id)
