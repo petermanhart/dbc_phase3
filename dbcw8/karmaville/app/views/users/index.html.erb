@@ -1,0 +1,27 @@
+<h1>KarmaVille's Most Famous</h1>
+
+<div id = "main">
+  <div id="user_list">
+    <table class="table table-bordered table-striped">
+      <tr>
+        <th>Karma</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+      </tr>
+      <% @users.each do |user| %>
+        <%= render 'user_row', :user => user %>
+      <% end %>
+    </table>
+  </div>
+
+  <div class="pagination pagination-centered">
+    <ul>
+      <li><a href="/page/<%= @prev %>">Prev</a></li>
+      <% (@start_page..@end_page).each do |page| %>
+        <li><a href="/page/<%= page %>"><%= page %></a></li>
+      <% end %>
+      <li><a href="/page/<%= @next %>">Next</a></li>
+    </ul>
+  </div>
+</main>
